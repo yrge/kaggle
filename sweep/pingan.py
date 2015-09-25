@@ -1,4 +1,4 @@
-__author__ = 'zhaoshihuan'
+__author__ = 'Stella Zhao'
 
 import scipy.stats as stats
 import pandas as pd
@@ -28,6 +28,7 @@ from combination1 import get_com_pare
 path = u'//Users/zhaoshihuan/Desktop/pingan/'
 path_result1 = path+u'result/nointer/'
 path_result2 = path+u'result/inter/'
+
 
 path_result = path_result1
 
@@ -277,7 +278,12 @@ def fit_data1(lb_pred,lb_t_pred,i,result,X,lb,Xt,lb_t,claf_name,thresh):#计算0
 
 
 
-def main():
+if __name__=='__main__':
+    
+    test()
+
+
+def test():
 
     pre_model4()
 
