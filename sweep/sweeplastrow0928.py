@@ -102,16 +102,17 @@ def SweepOut(k,CPk,j,CPj):
 
 
 
+
 class sm(object):
     def __init__(self,path):
-        self.path  = self.path
-        data = pd.RoadOA(path+'est.dat')
+        self.path  = path
+        data = pd.RoadOA(self.path+'est.dat')
         self.NumberOfVariable = data.shape[1]-2
         self.newRow = 1
 
-        aa = np.zeros([NumberOfVariable,NumberOfVariable+1])
-        bb = range(1,NumberOfVariable)
-        self.skipVector = pd.DataFrame({'col':bb,'iskip':np.zeros(NumberOfVariable-1)-1})
+        aa = np.zeros(self.NumberOfVariable,self.NumberOfVariable+1)
+        bb = range(1,self.NumberOfVariable)
+        self.skipVector = pd.DataFrame({'col':bb,'iskip':np.zeros(self.NumberOfVariable-1)-1})
 
         self.incrSweepMat = np.matrix(aa)
         self.fullSweepMat = np.matrix(aa)
@@ -122,7 +123,7 @@ class sm(object):
 
         self.fullSweepMat[0,:] = [0,26196.2095,12730.5881,587.0357]
         self.fullSweepMat[1,:] = [1,12730.58881,6934.3324,282.3329]
-        self.residualSS = incrSweepMat[0,1:]
+        self.residualSS = self.incrSweepMat[0,1:]
 
 
 
