@@ -97,7 +97,10 @@ def SweepOut(k,CPk,j,CPj):
 
 
 
-class sm:
+class sm(object):
+    def __init__(path):
+        train = pd.ReadOA
+        self =
     newRow = 2
     NumberOfVariable = 3
 
